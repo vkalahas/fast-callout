@@ -23,7 +23,7 @@ export class FastCalloutSettingTab extends PluginSettingTab {
 		containerEl.empty();
 
 		new Setting(containerEl)
-			.setName('Customize your fast callouts!')
+			.setName('Customization')
 			.setHeading();
 
 		new Setting(containerEl)
