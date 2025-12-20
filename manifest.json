@@ -1,11 +1,11 @@
 {
-	"id": "sample-plugin",
-	"name": "Sample Plugin",
+	"id": "fast-callout",
+	"name": "Fast Callout",
 	"version": "1.0.0",
 	"minAppVersion": "0.15.0",
-	"description": "Demonstrates some of the capabilities of the Obsidian API.",
-	"author": "Obsidian",
+	"description": "Lets you create callouts faster",
+	"author": "Vikramadhitya Kalahasthi",
 	"authorUrl": "https://obsidian.md",
-	"fundingUrl": "https://obsidian.md/pricing",
+	"fundingUrl": "https://example.com",
 	"isDesktopOnly": false
 }

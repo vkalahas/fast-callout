@@ -1,35 +1,39 @@
-import {App, PluginSettingTab, Setting} from "obsidian";
-import MyPlugin from "./main";
+import { App, PluginSettingTab, Setting } from "obsidian";
+import FastCallout from "./main";
 
-export interface MyPluginSettings {
-	mySetting: string;
+export interface FastCalloutSettings {
+	triggerPrefix: string;
 }
 
-export const DEFAULT_SETTINGS: MyPluginSettings = {
-	mySetting: 'default'
+export const DEFAULT_SETTINGS: FastCalloutSettings = {
+	triggerPrefix: '@'
 }
 
-export class SampleSettingTab extends PluginSettingTab {
-	plugin: MyPlugin;
+export class FastCalloutSettingTab extends PluginSettingTab {
+	plugin: FastCallout;
 
-	constructor(app: App, plugin: MyPlugin) {
+	constructor(app: App, plugin: FastCallout) {
 		super(app, plugin);
 		this.plugin = plugin;
 	}
 
 	display(): void {
-		const {containerEl} = this;
+		const { containerEl } = this;
 
 		containerEl.empty();
 
 		new Setting(containerEl)
-			.setName('Settings #1')
-			.setDesc('It\'s a secret')
+			.setName('Customize your fast callouts!')
+			.setHeading();
+
+		new Setting(containerEl)
+			.setName('Trigger prefix')
+			.setDesc('The character(s) that trigger callout replacement (e.g., "@" for @definition)')
 			.addText(text => text
-				.setPlaceholder('Enter your secret')
-				.setValue(this.plugin.settings.mySetting)
+				.setPlaceholder('@')
+				.setValue(this.plugin.settings.triggerPrefix)
 				.onChange(async (value) => {
-					this.plugin.settings.mySetting = value;
+					this.plugin.settings.triggerPrefix = value;
 					await this.plugin.saveSettings();
 				}));
 	}
