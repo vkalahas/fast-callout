@@ -24,9 +24,11 @@ export default class FastCallout extends Plugin {
 		const cursor = editor.getCursor();
 		const line = editor.getLine(cursor.line);
 		
-		// Check for trigger pattern "@definition " (with trailing space) before cursor
+		// Check for trigger pattern (e.g., "@definition ") with trailing space before cursor
 		const beforeCursor = line.substring(0, cursor.ch);
-		const triggerMatch = beforeCursor.match(/@(\w+) $/);
+		const prefix = this.settings.triggerPrefix;
+		const escapedPrefix = prefix.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+		const triggerMatch = beforeCursor.match(new RegExp(`${escapedPrefix}(\\w+) $`));
 		
 		if (triggerMatch && triggerMatch[1]) {
 			const calloutType = triggerMatch[1].toLowerCase();

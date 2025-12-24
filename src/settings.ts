@@ -28,9 +28,11 @@ export class FastCalloutSettingTab extends PluginSettingTab {
 
 		new Setting(containerEl)
 			.setName('Trigger prefix')
-			.setDesc('The character(s) that trigger callout replacement (e.g., "@" for @definition)')
-			.addText(text => text
-				.setPlaceholder('@')
+			.setDesc('The character that triggers callout replacement (e.g., "@" for @definition)')
+			.addDropdown(dropdown => dropdown
+				.addOption('@', '@')
+				.addOption(';', ';')
+				.addOption('!', '!')
 				.setValue(this.plugin.settings.triggerPrefix)
 				.onChange(async (value) => {
 					this.plugin.settings.triggerPrefix = value;
