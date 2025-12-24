@@ -10,4 +10,4 @@ If you type `@example`, it'll expand it to the Obsidian callout syntax and place
 
 ## Settings
 
-You can also use custom predefined trigger prefixes like ";" or "!" if you don't want to use "@".
+You can also use custom predefined trigger prefixes like `;` or `!` if you don't want to use `@`.
