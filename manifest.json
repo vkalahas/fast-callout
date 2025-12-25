@@ -1,7 +1,7 @@
 {
 	"id": "fast-callout",
 	"name": "Fast Callout",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"minAppVersion": "0.15.0",
 	"description": "Lets you create callouts faster.",
 	"author": "Vikramadhitya Kalahasthi",
