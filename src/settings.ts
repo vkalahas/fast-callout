@@ -119,7 +119,7 @@ export class FastCalloutSettingTab extends PluginSettingTab {
 				text.inputEl.addClass('font-mono');
 			});
 
-		// Create error message element
+		// error message
 		this.errorMessageEl = containerEl.createDiv({
 			cls: 'fast-callout-error-message fast-callout-error-hidden',
 			text: '',
