@@ -112,7 +112,7 @@ export class FastCalloutSettingTab extends PluginSettingTab {
 				text
 					.setPlaceholder('{"not": "note", "abs": "abstract", ...}')
 					.setValue(JSON.stringify(this.plugin.settings.calloutNicknames, null, 2))
-					.onChange(async (value) => {
+					.onChange((value) => {
 						void this.handleNicknamesChange(text, value);
 					});
 				text.inputEl.rows = 10;
