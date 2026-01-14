@@ -2,7 +2,7 @@
 
 This is minimal plugin that makes creating callouts in Obsidian faster and more natural.
 
-If you type `@example`, it'll expand it to the Obsidian callout syntax and place your cursor where the title should be.
+If you type `';ex` or `@example` (you can choose!), it'll expand it to the Obsidian callout syntax and place your cursor where the title should be.
 
 ## Features
 
