@@ -14,6 +14,8 @@ Nicknames keep you in the flow of what you were writing.
 
 ### Slash Commands
 
+You can bind slash commands to hotkeys if you prefer that workflow.
+
 <img width="331" height="110" alt="Screenshot 2026-01-14 at 10 13 35 AM" src="https://github.com/user-attachments/assets/b183dbd7-8bf9-40b9-9164-b6ebd3658821" />
 
 ### Default Callouts
